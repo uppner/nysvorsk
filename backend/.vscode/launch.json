@@ -9,9 +9,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/backend/bin/Debug/net8.0/backend.dll",
+            "program": "${workspaceFolder}/bin/Debug/net8.0/backend.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/backend",
+            "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
             "serverReadyAction": {
                 "action": "openExternally",
