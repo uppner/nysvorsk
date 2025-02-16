@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nysvorsk-frontend
+spec:
+  selector:
+    matchLabels:
+      app: nysvorsk-frontend
+  template:
+    metadata:
+      labels:
+        app: nysvorsk-frontend
+    spec:
+      containers:
+        - name: nysvorsk-frontend
+          image: arvidsson.azurecr.io/nysvorsk-frontend:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nysvorsk-frontend
+spec:
+  selector:
+    app: nysvorsk-frontend
+  type: NodePort
+  ports:
+    - name: http
+      port: 3002
+      nodePort: 30002
+      targetPort: 3000
+  
+
+
