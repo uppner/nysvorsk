@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: nysvorsk-frontend
-          image: arvidsson.azurecr.io/nysvorsk-frontend:latest
+          image: arvidsson.azurecr.io/nysvorsk-frontend:1505
 ---
 apiVersion: v1
 kind: Service
